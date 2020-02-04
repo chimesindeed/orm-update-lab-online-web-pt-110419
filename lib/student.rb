@@ -50,7 +50,7 @@ class Student
   end
   
   def self.new_from_db(arr) #id, name, grade
-  new_student = Student.new(arr[2], arr[2], arr[1])
+  new_student = Student.new(arr[1], arr[2], arr[0])
   binding.pry
   end
 
