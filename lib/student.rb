@@ -49,17 +49,10 @@ class Student
   end
   
   def self.new_from_db(arr) #id, name, grade
-  new_student = Student.new
-  new_student.id = arr[0]
-  new_student.name = arr[1]
-  new_student.grade = arr[2]
+  new_student = Student.new(arr[1], arr[2], arr[0])
   new_student
   end
-  
-  
-  
-  
-  
+
   
   
   
