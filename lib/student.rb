@@ -58,6 +58,7 @@ class Student
     sql = "SELECT * FROM students WHERE name = '#{name}'"
     row_to_instantiate = DB[:conn].execute(sql)
     new_from_db(row_to_instantiate)
+    binding.pry
   end
   
   
