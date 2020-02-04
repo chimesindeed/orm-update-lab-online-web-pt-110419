@@ -54,11 +54,14 @@ class Student
   new_student
   end
 
+  def self.find_by_name(name)
+    sql = "SELECT * FROM students WHERE name = '#{name}'"
+    row_to_instantiate = DB[:conn].execute(sql)
+    new_from_db(row_to_instantiate)
+  end
   
   
-  
-  
-  
+
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 end
