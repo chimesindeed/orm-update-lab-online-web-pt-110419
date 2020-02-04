@@ -62,19 +62,14 @@ class Student
   end
   
   def update
-    #sql_insert = "INSERT INTO students(name, grade) VALUES(?,?)"
-    #sql_select = "SELECT * FROM students"
     sql_update = "UPDATE students SET name = '#{self.name}' WHERE id = '#{self.id}'"
     
     if self.id !=nil # If id not nil - we know object has already been persisted
       DB[:conn].execute(sql_update)
       puts "record updated"
     end
+    
   end
-  
-  
-
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 end
-binding.pry
