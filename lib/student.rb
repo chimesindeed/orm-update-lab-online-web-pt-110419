@@ -61,6 +61,10 @@ class Student
     new_student
   end
   
+  def update
+    
+  end
+  
   
 
   # Remember, you can access your database connection anywhere in this class
