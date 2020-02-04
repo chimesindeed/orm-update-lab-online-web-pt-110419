@@ -56,6 +56,7 @@ class Student
 
   def self.find_by_name(name)
     sql = "SELECT * FROM students WHERE name = '#{name}'"
+    binding.pry
     row_to_instantiate = DB[:conn].execute(sql)
     new_student = new_from_db(row_to_instantiate)
     new_student
